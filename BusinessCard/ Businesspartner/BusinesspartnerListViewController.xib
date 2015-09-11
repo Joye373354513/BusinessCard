@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BusinesspartnerListViewController">
+            <connections>
+                <outlet property="searchDisplayController" destination="Rur-Nd-He9" id="MAf-MW-CB9"/>
+                <outlet property="tableView" destination="saB-Kq-Tkp" id="NUv-sP-VNN"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cYL-oB-RV8">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <subviews>
+                        <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="tkQ-jZ-BnN">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="7BS-j6-pTg"/>
+                            </connections>
+                        </searchBar>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="tkQ-jZ-BnN" secondAttribute="bottom" id="9EC-47-c70"/>
+                        <constraint firstAttribute="height" constant="44" id="DMo-fU-tgT"/>
+                        <constraint firstAttribute="trailing" secondItem="tkQ-jZ-BnN" secondAttribute="trailing" id="VIv-05-dCE"/>
+                        <constraint firstItem="tkQ-jZ-BnN" firstAttribute="leading" secondItem="cYL-oB-RV8" secondAttribute="leading" id="gk7-zU-cgs"/>
+                        <constraint firstItem="tkQ-jZ-BnN" firstAttribute="top" secondItem="cYL-oB-RV8" secondAttribute="top" id="rpH-QI-L69"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="saB-Kq-Tkp">
+                    <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="cYL-oB-RV8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="NWf-t0-a0x"/>
+                <constraint firstItem="saB-Kq-Tkp" firstAttribute="top" secondItem="cYL-oB-RV8" secondAttribute="bottom" id="TKX-Gz-ZHd"/>
+                <constraint firstAttribute="trailing" secondItem="saB-Kq-Tkp" secondAttribute="trailing" id="a7U-c2-L9H"/>
+                <constraint firstItem="cYL-oB-RV8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dBX-Cu-J21"/>
+                <constraint firstAttribute="bottom" secondItem="saB-Kq-Tkp" secondAttribute="bottom" id="uAY-b3-qGi"/>
+                <constraint firstItem="saB-Kq-Tkp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vx2-49-Yim"/>
+                <constraint firstAttribute="trailing" secondItem="cYL-oB-RV8" secondAttribute="trailing" id="xHM-cZ-1Xc"/>
+            </constraints>
+            <point key="canvasLocation" x="305" y="309"/>
+        </view>
+        <searchDisplayController id="Rur-Nd-He9">
+            <connections>
+                <outlet property="delegate" destination="-1" id="1qT-pv-hNU"/>
+                <outlet property="searchBar" destination="tkQ-jZ-BnN" id="slu-be-m4y"/>
+                <outlet property="searchContentsController" destination="-1" id="0QK-KS-Yrn"/>
+                <outlet property="searchResultsDataSource" destination="-1" id="N4a-QU-LN5"/>
+                <outlet property="searchResultsDelegate" destination="-1" id="SyL-pr-MDX"/>
+            </connections>
+        </searchDisplayController>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
